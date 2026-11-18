@@ -1,5 +1,55 @@
+# Python 字节码、编译扩展与构建产物
 __pycache__/
 *.py[cod]
+*.so
+*.pyd
+/build/
+/dist/
+*.egg-info/
+.eggs/
+
+# 本地虚拟环境
 .venv/
-outputs/*
-!outputs/.gitkeep
+venv/
+env/
+
+# 测试、检查工具与 Notebook 缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+
+# 实验输出：损失 CSV、曲线、动作预览、视频等
+# 将可视化文件放入这些目录，不全局忽略图片或 CSV，方便提交教学素材。
+/outputs/*
+!/outputs/.gitkeep
+/results/
+/runs/
+/logs/
+/wandb/
+/lightning_logs/
+/mlruns/
+events.out.tfevents.*
+*.log
+
+# 模型权重与导出的模型
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# 本地缓存与临时文件
+/.cache/
+/tmp/
+/temp/
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
